@@ -6,7 +6,10 @@
 # 成功                      -> exit 0
 # 1つ以上の診断が見つかった場合 -> exit 1
 #
+# @memo ビルド後でないと正確な診断結果が得られない
 # ref. https://github.com/JosefPihrt/Roslynator/blob/master/docs/cli/fix-command.md
+
+set -e;
 
 roslynator_analyze_commond=`dotnet roslynator analyze`
 roslynator_analyze_log=`echo "$roslynator_analyze_commond"`
@@ -14,9 +17,9 @@ roslynator_analyze_log=`echo "$roslynator_analyze_commond"`
 echo "$roslynator_analyze_log"
 
 if [ "`echo $roslynator_analyze_log | grep '0 diagnostics found'`" ]; then
-    echo 'Your code is perfect!'
+    echo '\nYour code is perfect!'
     exit 0
 fi
 
-echo 'Please fix the code.'
+echo '\nPlease fix the code.'
 exit 1
