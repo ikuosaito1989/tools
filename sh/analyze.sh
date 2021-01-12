@@ -13,10 +13,11 @@ set -e;
 
 roslynator_analyze_commond=`dotnet roslynator analyze`
 roslynator_analyze_log=`echo "$roslynator_analyze_commond"`
+diagnostics_log=`echo "$roslynator_analyze_log" | tail -n1`
 
 echo "$roslynator_analyze_log"
 
-if [ "`echo $roslynator_analyze_log | grep '0 diagnostics found'`" ]; then
+if [ "`echo $diagnostics_log | grep -x '0 diagnostics found'`" ]; then
     echo '\nYour code is perfect!'
     exit 0
 fi
