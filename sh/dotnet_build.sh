@@ -5,5 +5,5 @@
 set -e;
 
 dotnet restore
-dotnet build
+dotnet build --no-incremental
 dotnet tool restore
