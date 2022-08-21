@@ -11,7 +11,7 @@
 
 set -e;
 
-commond=`dotnet roslynator analyze $1`
+commond=`dotnet roslynator analyze $*`
 log=`echo "$commond"`
 diagnostics=`echo "$log" | tail -n1`
 
