@@ -5,6 +5,12 @@
     <Rule Id="CS8032" Action="None" />
     <Rule Id="CS1591" Action="None" />
     <Rule Id="CS4014" Action="None" />
+    <Rule Id="CS8618" Action="None" />
+    
+    <!-- <Nullable>オプションの影響。データによってはnullがありえないがチェックが煩わしいものは無効 -->
+    <Rule Id="CS8601" Action="None" />
+    <Rule Id="CS8604" Action="None" />
+    
     <Rule Id="RCS1186" Action="None" />
     <Rule Id="RCS1090" Action="None" />
     <!-- Remove suffix 'Async' from non-asynchronous method name. は一時的に無効 -->
