@@ -15,5 +15,12 @@
     <Rule Id="RCS1090" Action="None" />
     <!-- Remove suffix 'Async' from non-asynchronous method name. は一時的に無効 -->
     <Rule Id="RCS1047" Action="None" />
+    <Rule Id="RCS1228" Action="None" />
+    <Rule Id="RCS1266" Action="None" />
+    
+    <Rule Id="SYSLIB1045" Action="None" />
+
+    <Rule Id="CA1863" Action="None" />
+    
   </Rules>
 </RuleSet>
