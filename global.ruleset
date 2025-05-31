@@ -21,6 +21,8 @@
     <Rule Id="SYSLIB1045" Action="None" />
 
     <Rule Id="CA1863" Action="None" />
-    
+    <Rule Id="CA1304" Action="None" />
+    <Rule Id="CA1305" Action="None" />
+    <Rule Id="CA1311" Action="None" />
   </Rules>
 </RuleSet>
